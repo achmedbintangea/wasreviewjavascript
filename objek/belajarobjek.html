@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object Detected</title>
+</head>
+<body>
+    <h1>Objek on Javascript</h1>
+    <img src="tet.png" width=200>
+    <!-- </br>
+    Nama : <span id="nama"></span>
+    Umur : <span id="umur"></span>
+    Sifat : <span id="sifat"></span>
+    </br>
+    Nama : <span id="nama2"></span>
+    Umur : <span id="umur2"></span>
+    Sifat : <span id="sifat2"></span> -->
+
+    <div id="box"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+    <div id="box4"></div>
+
+
+    <script>
+    //membuat objek
+    // 1. cara penulisan yang pertama    
+
+        // var programmer = {
+        //     nama : "Sidik",
+        //     umur : 21,
+        //     sifat : "mengayomi"
+        // };
+    // 2. cara penulisan yang kedua    
+
+        // var desainer = new Object();
+        // desainer.nama2 = "akbar",
+        // desainer.umur2 = 24,
+        // desainer.sifat2= "humoris"
+    
+    // 1. cara penulisan untuk memanggil object ada 2 "dibawah ini cara nulis yang pertama"    
+
+        // document.getElementById("nama").innerHTML = programmer.nama;
+        // document.getElementById("umur").innerHTML = programmer.umur;
+        // document.getElementById("sifat").innerHTML = programmer.sifat;
+
+    // 2. cara penulisan untuk memanggil object yang kedua"    
+
+        // document.getElementById("nama2").innerHTML = desainer["nama2"];    
+        // document.getElementById("umur2").innerHTML = desainer["umur2"];
+        // document.getElementById("sifat2").innerHTML = desainer["sifat2"];
+
+
+    //membuat method fungsi pada objek
+        
+        // var programmer = {
+        //     nama : "Sidik",
+        //     umur : 21,
+        //     sifat : "mengayomi",
+
+        //     nama2 : "Wira",
+        //     umur2 : 21,
+        //     sifat2 : "mengayomi",
+
+        //     //kegunaan fungsi-fungsi dibawah agarkita bisa mengakses & mengubah nilai/data pada var
+        //     getData : function(){
+        //         return " Nama=" + this.nama + " Umur=" + this.umur + " Sifat=" + this.sifat;
+        //     },
+
+        //     //ketika ingin mengedit datanya
+        //     getData2 : function(){
+        //         return " Nama=" + this.nama2 + " Umur=" + this.umur2 + " Sifat=" + this.sifat2;
+        //     },
+
+        //     setData2 : function(nama2, umur2, sifat2){
+        //         this.nama2 = nama2,
+        //         this.umur2 = umur2,
+        //         this.sifat2 = sifat2
+        //     },
+        // };
+        
+        // programmer.setData2("Mikael",20,"Baik")
+
+        // document.getElementById("box").innerHTML = programmer.getData();
+        // document.getElementById("box2").innerHTML = programmer.getData2();
+
+    //Objek Prototype = seperti blueprint ketika membuat objek yang datanya tidak spesifik, keuntungan hanya sekali mendefinisikan sifat2nya/fungsi2nya
+    //tapi kita bsa bikin object yang sama
+        
+        // function idols_kpop(nama, grup){
+        //     this.nama = nama;
+        //     this.grup = grup;
+        // }
+
+        // var lay = new idols_kpop("Zhang Yixing","EXO");
+        // var sinb = new idols_kpop("Hwang Eunbi","Gfriend");
+        // var rei = new idols_kpop("rei","ive");
+
+        // document.getElementById("box").innerHTML = lay.nama;
+        // document.getElementById("box2").innerHTML = sinb.nama;
+        // document.getElementById("box3").innerHTML = rei.grup;
+
+        //jika ingin menambahkan prototype baru maka harus nis diluar function
+
+        // idols_kpop.prototype.negara = "South Korea";
+        // document.getElementById("box4").innerHTML = rei.negara;
+
+    //sifat mutable pada object = adalah ketika kita mengoper sesuatu variabel pada objek, dan variabelbaru ini kita ubah otomatis si ibjek ikut berubah
+        // 
+
+    </script>
+</body>
+</html>

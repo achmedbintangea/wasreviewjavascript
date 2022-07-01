@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity=
+"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <title>DO IT !!!</title>
+</head>
+<body>
+    <header class="bg-success text-white p-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <font face="Comic sans MS" 
+                        size="11" color="black">
+                        <strong>ToDo List</strong></br> 
+                    </font>
+                    <font face="Comic sans MS"
+                        size="6" color="black">
+                        <text>mau bikin apa nich ?</text>
+                    </font>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+        <form action="#">
+            <input type="text" id="new_text">
+            <button onclick="add()">Add</button>
+        </form>
+
+        <ul id="todo"></ul>
+
+ 
+    <style>
+        .done { text-decoration: line-through}
+    </style>
+
+    <script>
+
+        const todo = document.getElementById('todo')
+
+        //fitur TODO
+        // 1. menambahkan
+        // 2. coret kalau sudah selesai
+        // 3. menghapus
+        function add(){
+            //sebelum ngoding usahakan tulis apa yg akan kita lakukan/pikirkan seperti dibawah ini
+            //1. ambil nilai dari textnya
+                let newText = document.getElementById('new_text')
+                // console.log(new_Text.value);
+            //2. tambahkan list baru di ulnya
+                //cara lama
+                // let li  = document.createElement('li')
+                // let txt = document.createTextNode(newText.value)
+
+                // li.appendChild(txt)
+                // todo.appendChild(li)
+                //cara baru
+                let newTodo = "<li> <span onclick='toggle(this)'>" + newText.value + "</span>" +
+                    "<span onclick='removeItem(this)'> [x] </span>" +
+                    "</li>"
+
+                todo.insertAdjacentHTML('afterbegin', newTodo)
+            //kosongkan fieldnya
+                newText.value = ""
+        }
+
+        function toggle(el) {
+            el.classList.toggle('done')
+        }
+
+        function removeItem(el) {
+            el.parentElement.remove()
+        }
+
+        //tantangan buat tombol delete nya pakai button sama ketika selesai ada checkboxnya
+    </script>
+</body>
+</html>
